@@ -1,0 +1,19 @@
+# depslib dependency file v1.0
+1589216749 source:d:\программирование 2 семестр\4\main.cpp
+	<iostream>
+	<cstring>
+	"numbers.h"
+
+1589216810 d:\программирование 2 семестр\4\numbers.h
+	<iostream>
+	<cstring>
+
+1589311681 source:c:\users\111\desktop\4\main.cpp
+	<iostream>
+	<cstring>
+	"numbers.h"
+
+1589304908 c:\users\111\desktop\4\numbers.h
+	<iostream>
+	<cstring>
+
