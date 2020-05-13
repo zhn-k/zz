@@ -24,13 +24,11 @@ case 1:
     }
     myQueue.print();
     cout<<endl;
-    cout<<"getTop:";
+
     myQueue.getTop();
-    cout<<endl;
+
     cout<<"size:";
     myQueue.SIZE();
-    cout<<endl;
-    cout<<"isEmpty:";
     myQueue.isEmpty();
     cout<<endl;
     cout<<"dequeue:";
@@ -62,13 +60,12 @@ int n;
     }
     myQueue.print();
     cout<<endl;
-    cout<<"getTop:";
+
     myQueue.getTop();
     cout<<endl;
     cout<<"SIZE:";
     myQueue.SIZE();
-    cout<<endl;
-    cout<<"isEmpty:";
+
     myQueue.isEmpty();
     cout<<endl;
     cout<<"dequeue:";
@@ -100,14 +97,12 @@ int m;
        myQueue.enqueue(d);
     }
     myQueue.print();
-    cout<<endl;
-    cout<<"getTop:";
+
     myQueue.getTop();
     cout<<endl;
     cout<<"size:";
     myQueue.SIZE();
-    cout<<endl;
-    cout<<"isEmpty:";
+
     myQueue.isEmpty();
     cout<<endl;
     cout<<"dequeue:";

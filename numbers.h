@@ -90,7 +90,7 @@ template<typename T>
 int numbers<T>::clear()
 {   delete [] num;
     finish =0;
-    cout<< "clear";
+    return 0;
 }
 
 
@@ -98,21 +98,25 @@ template<typename T>
 T numbers<T>::getTop()
 
 {
-    cout<< *num;
+    return *num;
 }
 template<typename T>
 int numbers<T>::SIZE()
 
 {
-    cout<< finish;
+
+    return finish;
 }
 template<typename T>
 bool numbers<T>::isEmpty()
 {
     if (finish==0)
-        cout<<"FALSE";
+        {
+        return false;}
+
         else
-     cout<< "TRUE";
+    {
+     return true;}
 
 }
 
