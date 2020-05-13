@@ -4,9 +4,10 @@ using namespace std;
 #include "numbers.h"
 int main()
 {
+    setlocale(LC_ALL, "Russian");
 
 int k;
-cout<<"switch:";
+cout<<"введите номер варианта   :";
 cin>>k;
 switch(k){
 case 1:
@@ -15,27 +16,28 @@ case 1:
     numbers<char> myQueue(5);
     int ct = 0;
     char ch;
-    cout<<"queue:";
+    cout<<"введите очередь:";
     while (ct < 5)
     {
        ct++;
        cin >> ch;
        myQueue.enqueue(ch);
     }
+    cout<<"полученная очередь:";
     myQueue.print();
     cout<<endl;
 
     myQueue.getTop();
 
-    cout<<"size:";
+    cout<<"размер очереди:";
     myQueue.SIZE();
     myQueue.isEmpty();
     cout<<endl;
-    cout<<"dequeue:";
+    cout<<" очередь после операции dequeue:";
     myQueue.dequeue();
     myQueue.print();
     cout<<endl;
-    cout<<"enqueue:";
+    cout<<"очередь после операции enqueue:";
     myQueue.enqueue(ch);
     myQueue.print();
     cout<<endl;
@@ -47,32 +49,33 @@ case 2:
 {
 int n;
    numbers<char> myQueue(n);
-   cout<<"n:  ";
+   cout<<" введите количество элементов:  ";
     cin>>n;
         int c = 0;
     char h;
-    cout<<"queue:";
+    cout<<"введите очередь:";
     while (c < n)
     {
        c++;
        cin >> h;
        myQueue.enqueue(h);
     }
+    cout<<"очередь:";
     myQueue.print();
     cout<<endl;
 
     myQueue.getTop();
     cout<<endl;
-    cout<<"SIZE:";
+    cout<<"размер очереди:";
     myQueue.SIZE();
 
     myQueue.isEmpty();
     cout<<endl;
-    cout<<"dequeue:";
+    cout<<"очередь после операции dequeue:";
     myQueue.dequeue();
     myQueue.print();
     cout<<endl;
-    cout<<"enqueue:";
+    cout<<"очередь после операции enqueue:";
     myQueue.enqueue(h);
     myQueue.print();
     cout<<endl;
@@ -89,27 +92,28 @@ int m;
 
         int f = 0;
     char d;
-    cout<<"queue:";
+    cout<<"введите очередь"<< endl;
     while (f < 7)
     {
        f++;
        cin >> d;
        myQueue.enqueue(d);
     }
+    cout<<"очередь"<< endl;
     myQueue.print();
 
     myQueue.getTop();
     cout<<endl;
-    cout<<"size:";
+    cout<<"размер:";
     myQueue.SIZE();
 
     myQueue.isEmpty();
     cout<<endl;
-    cout<<"dequeue:";
+    cout<<"очередь после операции dequeue:";
     myQueue.dequeue();
     myQueue.print();
     cout<<endl;
-    cout<<"enqueue:";
+    cout<<"очередь после операции enqueue:";
     myQueue.enqueue(d);
     myQueue.print();
     cout<<endl;
