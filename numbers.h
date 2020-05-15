@@ -29,18 +29,16 @@ public:
 
 template<typename T>
     numbers<T>::numbers( numbers&p)
-{   finish=0;
+{
     size=p.size;
-    num= new T[size+1];
-    for(int i=0; i<size; i++)
-        num[i]=p.num[i];
+    num= new T[size];
+    for(finish=0;finish<p.finish; finish++)
+        num[finish]=p.num[finish];
 }
 
 template<typename T>
     numbers<T>::numbers():numbers(10)
     {
-        finish=0;
-    num = new T[size ];
     }
 
 template<typename T>
@@ -55,17 +53,12 @@ bool numbers<T>::enqueue( T const newElem)
 {
     if( finish ==size )
     {
-    T*w=new T [size +1];
-    for (int i=0; i<finish; i++)
-    {
-        w[i]=num[i];
-        delete[]num;
-        num=w;
+        cout<<"\nqueue is fulled yet"<<endl;
+        return false;
     }
-    }
-    num[finish++]=newElem;
-     return 0;
-
+    num[finish]=newElem;
+    ++finish;
+    return true;
  }
 
 template<typename T>
@@ -74,18 +67,13 @@ T numbers<T>::dequeue()
     if( finish == 0 )
         return 0;
 
-else
-    {T Value = num[0];
-    for (int a=0;a<finish; a++)
-    {
-      num[a]=num[a+1];
+    T Value = num[0];
     --finish;
+    for (int a=0;a<finish; a++)
+        num[a]=num[a+1];
     return Value;
-    }
-
 }
 
-}
 template<typename T>
 int numbers<T>::clear()
 {   delete [] num;
